@@ -1,8 +1,11 @@
-"use strict";
+/**
+ * Email Controller Class
+ * @author Amilton Brune
+ */
 
-const sendGridController = require("./sendGridController");
 const fs = require("fs");
 const ejs = require("ejs");
+const sendGridController = require("./sendGridController");
 
 exports.send_mail = async (req, res) => {
   await renderAndSaveHtml(

@@ -1,6 +1,10 @@
-// Importando fs
+/**
+ * Index Route Class
+ * @author Amilton Brune
+ */
+
+
 const fs = require("fs");
-// Importando path
 const path = require("path");
 
 module.exports = app => {

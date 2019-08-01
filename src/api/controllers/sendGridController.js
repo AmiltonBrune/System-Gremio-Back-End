@@ -1,3 +1,8 @@
+/**
+ * SendGrid Controller Class
+ * @author Amilton Brune
+ */
+
 const sgMail = require("@sendgrid/mail");
 
 require("dotenv").config();
