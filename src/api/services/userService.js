@@ -13,8 +13,9 @@ async function getAll() {
 async function getById(id) {
   const user = User.findById(id);
 
-  if ((user = null)) throw message.user_not_found;
-
+  if (user === null) {
+    throw message.user_not_found;
+  }
   return await user;
 }
 
