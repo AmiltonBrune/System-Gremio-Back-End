@@ -4,9 +4,11 @@
  */
 
 const userController = require("../controllers/userController");
+const authMiddleware = require("../middlewares/auth");
 const libraries = require("../../config/libraries");
 const router = libraries.express.Router();
 
+router.use(authMiddleware);
 router.get("/users", userController.getAll);
 router.get("/users/:id", userController.getById);
 router.post("/users", userController.register);
