@@ -21,3 +21,7 @@ exports.user_update = {
 exports.user_delete = {
   message: "User successfully deleted"
 };
+
+exports.user_invalid_password = {
+  error: "Password invalid"
+};

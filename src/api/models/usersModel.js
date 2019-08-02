@@ -34,7 +34,8 @@ const UserSchema = new Schema(
     },
     roles: {
       type: Array,
-      required: true
+      required: true,
+      default: "USER"
     },
     createAt: {
       type: Date,

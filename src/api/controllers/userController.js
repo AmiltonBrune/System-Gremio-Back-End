@@ -29,7 +29,6 @@ exports.register = (req, res) => {
     .create(req.body)
     .then(() => res.json(message.user_registered))
     .catch(err => {
-      console.log("error", err);
       res.status(400).send(err);
     });
 };
@@ -47,7 +46,7 @@ exports._delete = (req, res) => {
   userService
     ._delete(req.params.id)
     .then(() => res.send(message.user_delete))
-    .catch(err => {
+    .catch(() => {
       res.status(404).send(message.user_not_found);
     });
 };
